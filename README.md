@@ -94,7 +94,7 @@ DotLevel2_2:AddChild(DotLevel2_3_1);
 DotLevel2_2:AddChild(DotLevel2_3_2);
 ```
 
-`小红点结构`
+`小红点结构`（层级从左向右看）
 ```
             DotLevel2_1
 DotLevel1
@@ -102,6 +102,5 @@ DotLevel1
             DotLevel2_2
                             DotLevel2_3_2
 ```
-
 
   最后，每个小红点不要忘记了在“适当”的时候绑定一下 UI 对应的 GameObject，`BaseDot:Binding(root)`。当数据发生变化的时候，通知到 RedDotManager，调用一下 `RedDotManager:RefreshByKey(key)`
