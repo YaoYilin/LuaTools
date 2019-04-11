@@ -22,7 +22,7 @@ function HashSet:Add(item)
     local contains = m_Values[item] ~= nil;
     m_Values[item] = { };
     if not contains then m_Count = m_Count + 1 end
-    return contains;
+    return not contains;
 end
 
 function HashSet:Remove(item)
@@ -55,6 +55,10 @@ end
 function HashSet:Clear()
     m_Count = 0;
     m_Values = { };
+end
+
+function HashSet:ToString()
+    return table.concat(self:ToArray(), ", ");
 end
 
 setmetatable(HashSet, { __call = HashSet.New });
