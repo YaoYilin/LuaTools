@@ -46,6 +46,17 @@ serverTime:Modify(time);
 print(serverTime:CurrentTime():ToString());
 ```
 
+## utf8
+   Lua 5.3 版本提供了对 UTF8 的支持，这个也是在其基础上扩展的。下面加粗字体是扩展的方法。
+   * utf8.char (···)
+   * utf8.charpattern
+   * utf8.codes (s)
+   * utf8.codepoint (s [, i [, j]])
+   * utf8.len (s [, i [, j]])
+   * utf8.offset (s, n [, i])
+   ---
+   * **utf8.sub(s, b, l)**
+	
 ## red_dots / 游戏中的小红点管理器
   这个实现是把数据和 GameObject 分离的实现，小红点是否显示，只需要管理最底层的“叶子”节点对应的显示逻辑，然后每个节点发生变化再通知其父节点，如果没有变化则不再继续通知。
   用法：
